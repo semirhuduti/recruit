@@ -15,6 +15,10 @@ import javax.faces.event.ActionEvent;
 import javax.faces.event.ActionListener;
 import javax.inject.Named;
 
+/**
+ * The Bean used as a "view" for Registering a new Job applicant.
+ * @author Dan
+ */
 @Named("registerBean")
 @RequestScoped
 public class RegisterBean implements Serializable, ActionListener {
@@ -77,6 +81,11 @@ public class RegisterBean implements Serializable, ActionListener {
         this.email = email;
     }
     
+    /**
+     * Adds a Person to the the Database.
+     * 
+     * @return  String used in the JSF to redirect to the new page.
+     */
     public String addPersonToDB(){
         System.out.println("Is the controller null ? : " + (controller == null) );
         System.out.println(firstName + surName + SSN + email + username + password );
@@ -87,6 +96,12 @@ public class RegisterBean implements Serializable, ActionListener {
         return "competence";
     }
 
+    /**
+     * Method used for.... Vafan är det här..?
+     * 
+     * @param event
+     * @throws AbortProcessingException 
+     */
     @Override
     public void processAction(ActionEvent event) throws AbortProcessingException {
        addPersonToDB();

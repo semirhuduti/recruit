@@ -10,8 +10,9 @@ import java.util.List;
 import model.Role;
 
 /**
- *
- * @author Semir
+ * The Inteface which acts as an DTO for an RoleDAO object.
+ * 
+ * @author Semir, Dan, Milos
  */
 public interface RoleDAOInterface {
     

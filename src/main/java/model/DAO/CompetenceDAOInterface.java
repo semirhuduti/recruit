@@ -10,8 +10,9 @@ import model.Competence;
 import model.Person;
 
 /**
- *
- * @author Semir
+ * The Inteface which acts as an DTO for an CompetenceDAO object.
+ * 
+ * @author Semir, Dan, Milos
  */
 public interface CompetenceDAOInterface {
 

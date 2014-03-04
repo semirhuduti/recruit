@@ -15,7 +15,12 @@ import javax.faces.context.FacesContext;
 import javax.faces.validator.FacesValidator;
 import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
- 
+
+/**
+ * A Validator responisble for validating the SSN submitted to the app.
+ * 
+ * @author Semir, Dan, Milos
+ */
 @FacesValidator("util.validators.SSNValidator")
 public class SSNValidator implements Validator{
  
@@ -24,10 +29,22 @@ public class SSNValidator implements Validator{
 	private Pattern pattern;
 	private Matcher matcher;
  
+        /**
+         * The constructor.
+         */
 	public SSNValidator(){
 		  pattern = Pattern.compile(PATTERN);
 	}
  
+        /**
+         * Validates the value in the component from which the value then will 
+         * be submitted.
+         * 
+         * @param context       The JSF context.
+         * @param component     The UIComponent to validate.
+         * @param value         The value of the component.
+         * @throws ValidatorException 
+         */
 	@Override
 	public void validate(FacesContext context, UIComponent component,
 			Object value) throws ValidatorException {

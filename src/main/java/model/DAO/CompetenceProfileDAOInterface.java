@@ -11,8 +11,9 @@ import model.Competence;
 import model.CompetenceProfile;
 
 /**
- *
- * @author Semir
+ * The Inteface which acts as an DTO for an CompetenceProfileDAO object.
+ * 
+ * @author Semir, Dan, Milos
  */
 public interface CompetenceProfileDAOInterface {
     

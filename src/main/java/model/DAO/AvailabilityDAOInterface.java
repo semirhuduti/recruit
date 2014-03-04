@@ -10,8 +10,9 @@ import model.Availability;
 
 
 /**
- *
- * @author Semir
+ * The Inteface which acts as an DTO for an AvailabilityDAO object.
+ * 
+ * @author Semir, Dan, Milos
  */
 public interface AvailabilityDAOInterface {
 

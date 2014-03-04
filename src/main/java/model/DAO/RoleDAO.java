@@ -14,8 +14,10 @@ import model.Person;
 import model.Role;
 
 /**
- *
- * @author Semir
+ * A DAO that is responsible for accessing and storing an Role object 
+ * to the database.
+ * 
+ * @author Semir, Dan, Milos
  */
 @ApplicationScoped
 public class RoleDAO implements RoleDAOInterface {
@@ -27,6 +29,11 @@ public class RoleDAO implements RoleDAOInterface {
 
     }
 
+    /**
+     * Adds an Role object tot the database.
+     * 
+     * @param role  The Role object to be persisted
+     */
     @Override
     public void addRole(Role role) {
         System.out.println("Role in DAO" + role.toString());
@@ -35,6 +42,11 @@ public class RoleDAO implements RoleDAOInterface {
 
     }
 
+    /**
+     * Finds all the Role objects and returns them.
+     * 
+     * @return  Returns a List with all the Role object from the DB.
+     */
     @Override
     public List<Role> findAll() {
         TypedQuery<Role> query = em.createQuery(
@@ -42,12 +54,24 @@ public class RoleDAO implements RoleDAOInterface {
         return query.getResultList();
     }
 
+    /**
+     * Removes an Role object from the database.
+     * 
+     * @param role  The Role object to be found and removed from the DB.
+     */
     @Override
     public void removeRole(Role role) {
         em.merge(role);
         em.remove(role);
     }
 
+    /**
+     * Finds an Role object in the DB by it's PK which is the Long Id
+     * and and returns the object.
+     * 
+     * @param id    The Long PK to search for.
+     * @return      The found object.
+     */
     @Override
     public Role findByID(long id) {
         return em.find(Role.class, id);

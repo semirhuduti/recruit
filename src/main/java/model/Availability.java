@@ -24,7 +24,7 @@ import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Availability is a Persistence Entity used to stor data about when the recrit 
+ * Availability is a Persistence Entity used to store data about when the recrit 
  * is available to work.
  * 
  *

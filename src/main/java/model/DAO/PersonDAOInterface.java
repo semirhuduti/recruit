@@ -10,8 +10,9 @@ import java.util.List;
 import model.Person;
 
 /**
- *
- * @author Semir
+ * The Inteface which acts as an DTO for an PersonDAO object.
+ * 
+ * @author Semir, Dan, Milos
  */
 public interface PersonDAOInterface {
     
